@@ -7,13 +7,13 @@ public class Anagram {
 	public static void main(String[] args) {
 		String s1 = "java";
 		String s2 = "vaja";
-		int arr[] = new int[127];//
+		int arr[] = new int[127];   //
 		for (char c : s1.toCharArray()) {
 			System.err.print(c);
 			arr[c]++;
 		}
 		System.out.println();
-		for (char c : s2.toCharArray()) {
+		for (char c : s2.toCharArray()) {  //
 			System.out.print(c);
 			arr[c]--;
 

@@ -12,7 +12,7 @@ public class Consonents {
 				freq[ch ]++;
 			}
 		}
-
+//
 		// Print frequencies
 		for (int i = 0; i < freq.length; i++) {
 			if (freq[i] > 0) {
