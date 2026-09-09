@@ -7,16 +7,16 @@ public class Consonents {
 		int[] freq = new int[127];
 
 		for (char ch : s.toCharArray()) {
-		
-			if (!Vowels.isVowel(ch)&&( (ch>='A'&& ch<='Z')|| (ch>='a'&& ch<='z'))) {
-				freq[ch ]++;
+
+			if (!Vowels.isVowel(ch) && ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))) {
+				freq[ch]++;
 			}
 		}
 //
 		// Print frequencies
 		for (int i = 0; i < freq.length; i++) {
 			if (freq[i] > 0) {
-				System.out.println((char) (i ) + "-" + freq[i]);
+				System.out.println((char) (i) + "-" + freq[i]);
 			}
 		}
 
