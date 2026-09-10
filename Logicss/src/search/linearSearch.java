@@ -54,13 +54,14 @@ public class linearSearch {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 1, 2, 3, 4, 3, 2,3,3,3,3,3,3,3,3, 4, 5, 6, 5, 6, 7, 8, 9, 8, 7, 7 };
+		int arr[] = { 1, 2, 3, 4, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 5, 6, 5, 6, 7, 8, 9, 8, 7, 7 };
 
 		System.out.println(firstOccurance(arr, 4));
 		System.out.println(lastOccurance(arr, 5));
-		printAllOccuranceIndex(arr, 2);
-		int occur=3;
-		System.out.println("Number of occurance of "+occur+"  is: " + countOccurance(arr, occur));
+//		System.err.println("helloS");
+		printAllOccuranceIndex(arr, 3);
+		int occur = 3;
+		System.out.println("Number of occurance of " + occur + "  is: " + countOccurance(arr, occur));
 	}
 
 }
