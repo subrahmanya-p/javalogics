@@ -2,7 +2,7 @@ package numberss;
 
 import java.util.Scanner;
 
-public class CheckPrime {
+public class CheckPrimeWithReturnType {
 	public static boolean isPrime(int n) {
 		if (n <= 1) {
 			return false;
