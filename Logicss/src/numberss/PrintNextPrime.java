@@ -1,4 +1,4 @@
-package arrayy;
+package numberss;
 
 public class PrintNextPrime {
 
