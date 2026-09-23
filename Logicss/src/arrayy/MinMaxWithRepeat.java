@@ -98,6 +98,7 @@ public class MinMaxWithRepeat {
 				Thirdmax = i;
 
 			}
+			//
 
 		}
 		System.out.println("First Max : " + Firstmax);
