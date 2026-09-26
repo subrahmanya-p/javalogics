@@ -34,3 +34,4 @@ public class PrintNextPrime {
         System.out.println(nextPrime(20)); 
         System.out.println(nextPrime(7));  
 }
+}
