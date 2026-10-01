@@ -1,9 +1,13 @@
 package all;
 
+import java.util.Arrays;
+
 public class CheckAnagramString {
 	public static boolean isAnagram(String s1, String s2) {
 		char[] ch1 = s1.toCharArray();
+		Arrays.sort(ch1);
 		char[] ch2 = s2.toCharArray();
+		Arrays.sort(ch2);
 		if (s1.length() != s2.length()) {
 			return false;
 
