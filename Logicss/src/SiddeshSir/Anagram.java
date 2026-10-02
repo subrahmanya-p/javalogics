@@ -23,6 +23,8 @@ public class Anagram {
 			if(i!=0) {
 				System.out.println("Not a Anagram");
 				return;
+				
+				
 			}
 		}
 		System.out.println("Yes it is Anagram");
