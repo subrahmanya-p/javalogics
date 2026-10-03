@@ -1,4 +1,4 @@
-package all;
+package duplicate;
 
 import java.util.Arrays;
 

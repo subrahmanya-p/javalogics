@@ -1,9 +1,9 @@
-package all;
+package duplicate;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class RemoveDuplicatesFromString {
+public class RemoveDuplicatesFromCharacter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
