@@ -6,7 +6,7 @@ public class FromNumber {
         int result = 0;
         int place = 1;
 
-        while (n > 0) {
+        while (n != 0) {
             int last = n % 10;
             int secondLast = (n / 10) % 10;
 
