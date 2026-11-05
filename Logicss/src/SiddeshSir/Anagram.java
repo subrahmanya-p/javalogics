@@ -9,7 +9,7 @@ public class Anagram {
 		String s2 = "vaja";
 		int arr[] = new int[127];   //
 		for (char c : s1.toCharArray()) {
-			System.err.print(c);
+//			System.err.print(c);
 			arr[c]++;
 		}
 		System.out.println();
