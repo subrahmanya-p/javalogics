@@ -1,4 +1,4 @@
-package threedarray;
+package twod;
 
 public class Main {
 	int[][] arr;
