@@ -1,4 +1,4 @@
-package dsabysubrahmanyaa;
+package slidingwindow;
 
 public class MinimumSumOfKConsecutive {
 	public static void main(String[] args) {

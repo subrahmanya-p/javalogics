@@ -1,4 +1,4 @@
-package dsabysubrahmanyaa;
+package slidingwindow;
 
 public class SumOfConsequegativer {
 	public static void main(String[] args) {
