@@ -1,5 +1,10 @@
 package twod;
 
+import java.util.Arrays;
+import java.util.Objects;
+
+import SiddeshSir.Employee;
+
 public class Student {
 	int id;
 	String name;
@@ -10,9 +15,20 @@ public class Student {
 		this.name = name;
 		this.age = age;
 	}
-	
 
 	Student[][] arr;
+
+	@Override
+	public String toString() {
+		return "Student : {  id : " + id + ", name : " + name + ", age : " + age + "}";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Student s1 = (Student) obj;
+		return this.id == s1.id && this.name.equals(s1.name) && this.age == s1.age;
+
+	}
 
 	public Student(int row, int column) {
 		try {
@@ -31,19 +47,27 @@ public class Student {
 		}
 	}
 
+	public void traverse() {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				if (arr[i][j] != null)
+					System.out.println(arr[i][j]);
+			}
+		}
+
+	}
+
 	void insert(int row, int column, Student student) {
 		try {
-			if (arr[row][column] == null) {
+			if (arr[row][column] == null && student != null) {
 				arr[row][column] = student;
 				System.out.println("The values are inserted !");
 			} else {
-				arr[row][column] = student;
-				System.out.println("The values are  updated !");
-
+				System.out.println("Sorry Something went Wrong! !");
 			}
 
 		} catch (Exception e) {
-			System.out.println("Invalid");
+			System.out.println("Invalid Index ");
 		}
 	}
 
@@ -52,7 +76,7 @@ public class Student {
 
 			for (int i = 0; i < arr.length; i++) {
 				for (int j = 0; j < arr[i].length; j++) {
-					if (student!=null&& arr[i][j].id==student.id ) {
+					if (student != null && arr[i][j].equals(student)) {
 						System.out.println("The value : " + student + " is present at the index :" + "[" + i + "]" + "["
 								+ j + "]");
 					}
@@ -86,10 +110,11 @@ public class Student {
 
 			for (int i = 0; i < arr.length; i++) {
 				for (int j = 0; j < arr[i].length; j++) {
-					if ( student.id==arr[i][j].id && student!=null) {
+					if (arr[i][j].equals(student) && student != null) {
 						arr[i][j] = null;
 						System.out.println("The value : " + student + " is present at the index :" + "[" + i + "]" + "["
 								+ j + "]   has beeen deleted ");
+						return;
 					}
 
 				}
@@ -115,26 +140,49 @@ public class Student {
 
 	}
 
+	public void SortById() {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length ; j++) {
+				for (int j2 = 0; j2 < arr[i].length - j - 1; j2++) {
+					if (arr[i][j2].id > arr[i][j2 + 1].id) {
+						Student temp = arr[i][j2];
+						arr[i][j2] = arr[i][j2 + 1];
+						arr[i][j2 + 1] = temp;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
 	public static void main(String[] args) {
 		Student matrix = new Student(3, 3);
 
-		matrix.insert(0, 0, new Student(12, "subbu", 21));
+		matrix.insert(0, 0, new Student(992, "subbu", 21));
 		matrix.insert(0, 1, new Student(13, "harish", 22));
-		matrix.insert(0, 2, new Student(14, "mahesh", 23));
+		matrix.insert(0, 2, new Student(0, "mahesh", 23));
 
-		matrix.insert(1, 0, new Student(15, "shubha", 20));
-		matrix.insert(1, 1, new Student(16, "nishmitha", 21));
+		matrix.insert(1, 0, new Student(1999, "shubha", 20));
+		matrix.insert(1, 1, new Student(90, "nishmitha", 21));
 		matrix.insert(1, 2, new Student(17, "sandya", 22));
 
-		matrix.insert(2, 0, new Student(18, "charishma", 20));
-		matrix.insert(2, 1, new Student(19, "sushma", 23));
-		matrix.insert(2, 2, new Student(20, "kusuma", 21));
-		
+		matrix.insert(2, 0, new Student(18, "dj", 20));
+		matrix.insert(2, 1, new Student(19, "nuknown", 23));
+		matrix.insert(2, 2, new Student(0, "sia", 21));
 
-		matrix.searchByValue(new Student(16, "nishmitha", 21));
-		matrix.searchByRowAndColumn(2, 1);
-		matrix.deleteByValue(new Student(14, "mahesh", 23));
-		matrix.deleteByRowAndColumn(1, 2);
+//		matrix.searchByValue(new Student(16, "nishmitha", 21));
+//		matrix.searchByRowAndColumn(2, 1);
+//		matrix.deleteByValue(new Student(14, "mahesh", 23));
+//		matrix.deleteByRowAndColumn(1, 2);
+		System.out.println("before");
+		matrix.traverse();
+		System.out.println("After");
+		matrix.SortById();
+		matrix.traverse();
+		
+		
 
 	}
 }
